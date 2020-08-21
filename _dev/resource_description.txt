@@ -7,3 +7,16 @@ This add-on allows controlling image attachments cache headers.
 [LIST]
 [*]PHP 7.3+
 [/LIST]
+
+[SIZE=5][B]Options[/B][/SIZE]
+
+[SIZE=3][B]Attachments[/B][/SIZE]
+[TABLE]
+[TR]
+[TH]Name[/TH]
+[TH]Description[/TH]
+[/TR]
+[TR]
+[TD]Image attachment cache control[/TD]
+[/TR]
+[/TABLE]
