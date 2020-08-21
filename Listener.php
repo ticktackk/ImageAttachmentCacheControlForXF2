@@ -28,5 +28,7 @@ class Listener
 
         $response->header('Expires', \gmdate('D, d M Y H:i:s', \XF::$time + $maxAge) . ' GMT');
         $response->header('Cache-Control', "{$cacheability}, max-age={$maxAge}");
+
+        Globals::setImageAttachment(null);
     }
 }
