@@ -16,6 +16,6 @@ Options
 
 #### Attachments
 
-| Name                           | Description |
-| ------------------------------ | ----------- |
-| Image attachment cache control |             |
+| Name                           | Description                                                           |
+| ------------------------------ | --------------------------------------------------------------------- |
+| Image attachment cache control | Configuration to control how the image attachment caching would work. |

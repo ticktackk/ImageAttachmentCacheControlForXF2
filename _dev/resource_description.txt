@@ -18,5 +18,6 @@ This add-on allows controlling image attachments cache headers.
 [/TR]
 [TR]
 [TD]Image attachment cache control[/TD]
+[TD]Configuration to control how the image attachment caching would work.[/TD]
 [/TR]
 [/TABLE]
