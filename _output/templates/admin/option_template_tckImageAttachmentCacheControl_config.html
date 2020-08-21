@@ -1,0 +1,18 @@
+<xf:checkboxrow label="{$option.title}"
+				hint="{$hintHtml}"
+				explain="{$explainHtml}"
+				html="{$listedHtml}">
+	<xf:option name="{$inputName}[enabled]" value="1" selected="$option.option_value.enabled"
+			   label="{{ phrase('tckImageAttachmentCacheControl_enable_image_attachment_cache_control') }}">
+		<xf:dependent>
+			<div class="inputChoices-spacer">{{ phrase('tckImageAttachmentCacheControl_cacheability:') }}</div>
+			<xf:radio name="{$inputName}[config][cacheability]" value="{$option.option_value.config.cacheability}">
+				<xf:option value="public" label="{{ phrase('tckImageAttachmentCacheControl_cacheability_type.public') }}" />
+				<xf:option value="private" label="{{ phrase('tckImageAttachmentCacheControl_cacheability_type.private') }}" />
+			</xf:radio>
+
+			<div class="inputChoices-spacer">{{ phrase('tckImageAttachmentCacheControl_max_age_in_days:') }}</div>
+			<xf:numberbox name="{$inputName}[config][max_age]" value="{$option.option_value.config.max_age}" min="1" />
+		</xf:dependent>
+	</xf:option>
+</xf:checkboxrow>

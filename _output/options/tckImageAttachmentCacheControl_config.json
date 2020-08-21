@@ -1,0 +1,15 @@
+{
+    "edit_format": "template",
+    "edit_format_params": "option_template_tckImageAttachmentCacheControl_config",
+    "data_type": "array",
+    "sub_options": [
+        "enabled",
+        "config"
+    ],
+    "validation_class": "TickTackk\\ImageAttachmentCacheControl\\Option\\ImageAttachmentCacheControlConfig",
+    "validation_method": "verifyOption",
+    "default_value": "{\"enabled\":false,\"config\":{\"cacheability\":\"private\",\"max_age\":1}}",
+    "relations": {
+        "attachments": 330
+    }
+}
