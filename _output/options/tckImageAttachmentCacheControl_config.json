@@ -8,7 +8,7 @@
     ],
     "validation_class": "TickTackk\\ImageAttachmentCacheControl\\Option\\ImageAttachmentCacheControlConfig",
     "validation_method": "verifyOption",
-    "default_value": "{\"expiration_duration\":0,\"cacheability\":\"private\",\"max_age\":0}",
+    "default_value": "{\"enabled\":false,\"config\":{\"cacheability\":\"private\",\"max_age\":1}}",
     "relations": {
         "attachments": 330
     }
