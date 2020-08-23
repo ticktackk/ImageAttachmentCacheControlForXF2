@@ -1,6 +1,6 @@
 [HEADING=1]Image Attachment Cache Control for XenForo 2.1.10.2+[/HEADING]
 [HEADING=1]Description[/HEADING]
-[P]This add-on allows controlling image attachments cache headers.[/P]
+This add-on allows controlling image attachments cache headers.
 [HEADING=1]Requirements[/HEADING]
 [LIST]
 [*]PHP 7.3+
@@ -18,6 +18,6 @@
 [/TR]
 [/TABLE]
 [HEADING=1]Funding[/HEADING]
-[P]This project was initially funded by [URL='https://cameraderie.org/']Cameraderie.org[/URL].[/P]
+This project was initially funded by [URL='https://cameraderie.org/']Cameraderie.org[/URL].
 [HEADING=1]License[/HEADING]
-[P]This project is licensed under the MIT License - see the [URL='https://github.com/ticktackk/ImageAttachmentCacheControlForXF2/blob/master/LICENSE.md']LICENSE.md[/URL] file for details.[/P]
+This project is licensed under the MIT License - see the [URL='https://github.com/ticktackk/ImageAttachmentCacheControlForXF2/blob/master/LICENSE.md']LICENSE.md[/URL] file for details.
