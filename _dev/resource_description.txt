@@ -17,5 +17,7 @@
 [TD]Configuration to control how the image attachment caching would work.[/TD]
 [/TR]
 [/TABLE]
+[HEADING=1]Funding[/HEADING]
+This project was initially funded by [URL='https://cameraderie.org/']Cameraderie.org[/URL].
 [HEADING=1]License[/HEADING]
 This project is licensed under the MIT License - see the [URL='https://github.com/ticktackk/ImageAttachmentCacheControlForXF2/blob/master/LICENSE.md']LICENSE.md[/URL] file for details.
