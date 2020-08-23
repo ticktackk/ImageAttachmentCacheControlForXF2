@@ -19,3 +19,8 @@ Options
 | Name                           | Description                                                           |
 | ------------------------------ | --------------------------------------------------------------------- |
 | Image attachment cache control | Configuration to control how the image attachment caching would work. |
+
+License
+-------
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/ticktackk/ImageAttachmentCacheControlForXF2/blob/master/LICENSE.md) file for details.
