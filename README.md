@@ -23,7 +23,9 @@ Options
 Funding
 -------
 
-This project was initially funded by [Cameraderie.org](https://cameraderie.org/). License
+This project was initially funded by [Cameraderie.org](https://cameraderie.org/).
+
+License
 -------
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/ticktackk/ImageAttachmentCacheControlForXF2/blob/master/LICENSE.md) file for details.
