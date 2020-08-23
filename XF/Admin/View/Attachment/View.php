@@ -17,13 +17,8 @@ class View extends XFCP_View
 
     public function renderRaw()
     {
-        try
-        {
-            return parent::renderRaw();
-        }
-        finally
-        {
-            $this->resetForTckImageAttachmentCacheControl();
-        }
+        $this->setupForTckImageAttachmentCacheControl();
+
+        return parent::renderRaw();
     }
 }
