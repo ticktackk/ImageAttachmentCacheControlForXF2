@@ -9,6 +9,9 @@ use XF\Repository\User as UserRepo;
 
 trait AttachmentTrait
 {
+    /**
+     * @throws \Exception
+     */
     public function setupForTckImageAttachmentCacheControl() : void
     {
         if (!\XF::options()->tckImageAttachmentCacheControl_config['enabled'])
@@ -38,18 +41,6 @@ trait AttachmentTrait
 
         /** @var AttachmentEntity $attachment */
         if (!$attachment->Data->width || !$attachment->Data->height)
-        {
-            return null;
-        }
-
-        /** @var UserRepo $userRepo */
-        $userRepo = \XF::repository('XF:User');
-        $isAttachmentViewableByGuest = \XF::asVisitor($userRepo->getGuestUser(), function () use($attachment)
-        {
-            return $attachment->canView();
-        });
-
-        if (!$isAttachmentViewableByGuest)
         {
             return null;
         }
