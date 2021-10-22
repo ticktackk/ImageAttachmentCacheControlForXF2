@@ -2,49 +2,38 @@
 
 namespace TickTackk\ImageAttachmentCacheControl\Pub\View;
 
-use TickTackk\ImageAttachmentCacheControl\Globals;
 use XF\Entity\Attachment as AttachmentEntity;
-use XF\Entity\User as UserEntity;
-use XF\Repository\User as UserRepo;
 
 trait AttachmentTrait
 {
-    /**
-     * @throws \Exception
-     */
-    public function setupForTckImageAttachmentCacheControl() : void
-    {
-        if (!\XF::options()->tckImageAttachmentCacheControl_config['enabled'])
+	/**
+	 * @return string|HttpResponseStream
+	 *
+	 * @throws \Exception
+	 */
+	public function renderRaw()
+	{
+		$params = $this->getParams();
+
+		$config = \XF::options()->tckImageAttachmentCacheControl_config;
+
+		if (
+			$config['enabled']
+			&& isset($params['attachment'])
+			&& ($attachment = $params['attachment'])
+			&& ($attachment instanceof AttachmentEntity)
+			&& $attachment->Data
+			&& $attachment->Data->width
+			&& $attachment->Data->height
+		)
         {
-            return;
+			$cacheability = $config['config']['cacheability'];
+			$maxAge = $config['config']['max_age'] * 86400;
+
+			$this->response->header('Expires', \gmdate('D, d M Y H:i:s', \XF::$time + $maxAge) . ' GMT');
+			$this->response->header('Cache-Control', "{$cacheability}, max-age={$maxAge}");
         }
 
-        Globals::setImageAttachment($this->getImageAttachmentFromParamsForTckImageAttachmentCacheControl());
-    }
-
-    /**
-     * @throws \Exception
-     */
-    protected function getImageAttachmentFromParamsForTckImageAttachmentCacheControl() :? AttachmentEntity
-    {
-        $params = $this->getParams();
-        if (!\array_key_exists('attachment', $params))
-        {
-            return null;
-        }
-
-        $attachment = $params['attachment'];
-        if (!$attachment instanceof AttachmentEntity || !$attachment->Data)
-        {
-            return null;
-        }
-
-        /** @var AttachmentEntity $attachment */
-        if (!$attachment->Data->width || !$attachment->Data->height)
-        {
-            return null;
-        }
-
-        return $attachment;
-    }
+		return parent::renderRaw();
+	}
 }
